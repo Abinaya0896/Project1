@@ -1,0 +1,39 @@
+package org.day9alert;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Confirmalert {
+
+	public static void main(String[]args)
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pethaiyan\\eclipse-workspace\\Facebook\\Suji\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver =new ChromeDriver();
+		
+		driver.get("http://demo.automationtesting.in/Alerts.html");
+		
+		String url = driver.getCurrentUrl();
+		System.out.println(url);
+				
+		String title = driver.getTitle();
+    	System.out.println(title);
+    	
+        WebElement btnClick1=driver.findElement(By.xpath("//a[text()='Alert with OK & Cancel ']"));
+	    
+	    btnClick1.click();
+	    
+	    
+	    
+	    WebElement btnClick2=driver.findElement(By.xpath("//button[text()='click the button to display a confirm box ']"));
+	    
+	    btnClick2.click();
+	    
+	    Alert Alert = driver.switchTo().alert();
+	    
+	    Alert.dismiss();
+}
+}
