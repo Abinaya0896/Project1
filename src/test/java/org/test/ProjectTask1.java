@@ -6,6 +6,6 @@ public class ProjectTask1 {
 		
 		System.out.println("Abi");
 		
-		System.out.println("Amutha");
+		System.out.println("Hello");
 	}
 }
